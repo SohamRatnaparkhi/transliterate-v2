@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transliterate-video</title>
+    <link rel="stylesheet" href="..\css\style.forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="heading">Video Translation</h1>
+    <div class="io-container">
+        <div class="form input" id="video-translate">
+            <form method="POST" autocomplete="false" id="form_video" enctype="multipart/form-data"
+                action="/audio_translate">
+                <!-- <label class="box-labels">Upload video file :</label> <br> -->
+                <!-- <textarea autocomplete="false" type="text" name="user_text" class="form-name" id="textarea" required></textarea><br> -->
+                <!-- <label>Text File:</label>
+                                                        <input type="file" name='file' class='btn'><br><br> -->
+                <label class="box-labels">Language :</label>
+                <!-- <input list="langList" > -->
+
+                <select id="language-list-video" name="target_language" required>
+                    <option class="opt1" value="english"> Available Languages </option>
+                    <!-- <option class="opt1" value="french"> french </option> -->
+                </select>
+                <br>
+                <br>
+                <label class="box-labels">VideoFile:</label>
+                <input type="file" name='file' class='btn-file-choose' required><br><br>
+                <!-- action="{{url_for('translate_text')}}" -->
+
+                <!-- <script src="..\static\js\index.inputForm.js"></script> -->
+                <!-- <input type="text" name="target_language" class="form-name" required><br> -->
+                <!-- <input type="submit" class="btn btn-warning text-center"> -->
+                <!-- <button onclick="displayText()">Submit</button> -->
+                <div id="original">
+
+                </div>
+                <br><br>
+                <button class="submit-btn" id="progress" onclick="handleVideoSubmittion()"><span>Translate
+                        now</span></button>
+            </form>
+        </div>
+        <div class="form-output">
+            <br><br><br><br>
+            <div id="translated-video">
+                <p id="file-selection">
+                    <br>
+                </p>
+                <p id="selected-lang" style="text-align: center;">
+                    Translated Video will be displayed here!
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="state">
+        <p></p>
+    </div>
+
+
+    <script src="..\js\connector.js"></script>
+    <script src="..\js\editor.js"></script>
+    <script src="..\js\languageListAdder.js"></script>
+</body>
+
+</html>

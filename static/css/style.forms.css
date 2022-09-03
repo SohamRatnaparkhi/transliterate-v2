@@ -1,0 +1,179 @@
+@media only screen and (max-width: 600px) {
+    .form-output {
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        padding: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .input {
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        padding: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .io-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 8vh 4vw;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .io-container {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        margin: 8vh 4vw;
+        /* flex-wrap: wrap; */
+        gap: 2%;
+        /* justify-content: space-between; */
+    }
+
+    .input {
+        border-radius: 2px;
+        width: 40vw;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        padding: 2%;
+    }
+
+    .form-output {
+        /* padding: 2%; */
+        width: 40vw;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+    }
+}
+
+.io-container {
+    padding: 10px;
+}
+
+.input {
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.form-output {
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+/* Adding hower effect to submit-btn */
+.submit-btn {
+    border-radius: 4px;
+    background-color: #005ca5;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.05em;
+    padding: 5px;
+    width: 70%;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 0 5vw;
+}
+
+.submit-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.submit-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover span {
+    padding-right: 25px;
+}
+
+.submit-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* text translation */
+#language-list-text {
+    /* font-size: 1.2em; */
+    margin: 0 5vw;
+}
+
+textarea {
+    width: 95%;
+    height: 50vh;
+    resize: none;
+    /* border: none; */
+    outline: none;
+    background-color: #fffbfb;
+    color: black;
+    font-size: 0.8rem;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-top: 5px;
+    margin: 0;
+}
+
+.form-output {
+    padding: 1.5%;
+}
+
+.form-output #text{
+    width: 95%;
+    height: 48vh;
+    resize: none;
+    border: 1px solid #000000;
+    outline: none;
+    background-color: #fffbfb;
+    color: black;
+    font-size: 0.8rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 5px;
+    overflow: scroll;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: black;
+    padding: 0.5vw;
+}
+
+
+#record-btn {
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid red;
+    color: black;
+    text-align: center;
+    font-size: 1em;
+    padding: 5px;
+    width: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 0 8vw
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}

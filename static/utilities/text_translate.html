@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transliterate-text</title>
+    <link rel="stylesheet" href="..\css\style.forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="heading">
+        Text Translation
+    </h1>
+    <div class="io-container">
+        <div class="form input" id="text-translate">
+            <form method="POST" autocomplete="false" id="form_text" enctype="multipart/form-data">
+                <label class="box-labels">Language :</label>
+                <select id="language-list-text" name="target_language" required>
+                    <option class="opt1" value="english"> Available Languages </option>
+                    <!-- <option class="opt1" value="french"> french </option> -->
+                </select>
+                <br><br>
+                <label class="box-labels">Enter your text :</label> <br><br>
+                <textarea autocomplete="false" type="text" name="user_text" class="form-name" id="textarea"
+                    required></textarea><br>
+                <!-- <label>Text File:</label>
+                                                <input type="file" name='file' class='btn'><br><br> -->
+                <!-- <input list="langList" > -->
+
+                <!-- action="{{url_for('translate_text')}}" -->
+                <!-- <script src="..\static\js\index.inputForm.js"></script> -->
+                <br>
+                <br>
+                <!-- <input type="text" name="target_language" class="form-name" required><br> -->
+                <!-- <input type="submit" class="btn btn-warning text-center"> -->
+                <button class="submit-btn" onclick="handleTextSubmittion()"><span>Translate now</span></button>
+                <!-- <button onclick="displayText()">Submit</button> -->
+            </form>
+        </div>
+        
+        <div class="form-output" id="output">
+            <p class="language">
+                Selected Language - 
+            </p>
+            <p>Translated text</p>
+            <div class="output-textarea">
+                <pre id="text">
+                    <!-- {{result}} -->
+                </pre>
+            </div>
+            <br><br>
+            <button class="submit-btn" onclick="handleTextCopy()"><span>Copy text</span></button>
+        </div>
+    </div>
+    <script src="..\js\connector.js"></script>
+    <script src="..\js\languageListAdder.js"></script>
+    <script src="..\js\editor.js"></script>
+</body>
+
+</html>
