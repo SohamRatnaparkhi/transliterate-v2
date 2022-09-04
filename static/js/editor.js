@@ -47,16 +47,14 @@ const handleTextSubmittion = () => {
 }
 
 const handleTextCopy = () => {
-    var copyText = document.getElementById("text");
 
-    /* Select the text field */
-    console.log(copyText);
-    // copyText.select();
-    // copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-    /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText);
-
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText);
+    // Copy text in id text to clipboard
+    let text = document.getElementById('text')
+    text = text.innerText
+    // text.select()
+    // text.setSelectionRange(0, 99999)
+    console.log(text);
+    // document.execCommand('copy')
+    navigator.clipboard.writeText(text);
+    alert("Copied the text: " + text);
 }
