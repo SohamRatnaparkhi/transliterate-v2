@@ -56,5 +56,5 @@ const handleTextCopy = () => {
     console.log(text);
     // document.execCommand('copy')
     navigator.clipboard.writeText(text);
-    alert("Copied the text: " + text);
+    alert("Copied the text successfully!");
 }
